@@ -1,0 +1,14 @@
+PODS:
+  - Folders (0.1.0)
+
+DEPENDENCIES:
+  - Folders (from `../`)
+
+EXTERNAL SOURCES:
+  Folders:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Folders: b489ed799c586e6d6a31965b2c2732b8e9967e77
+
+COCOAPODS: 0.39.0
