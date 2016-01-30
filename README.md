@@ -9,6 +9,15 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```objective-c
+NSLog(@"Application Support Folder: %@", [NSFileManager fld_applicationSupportFolder]);
+NSLog(@"Documents Folder: %@", [NSFileManager fld_documentFolder]);
+NSLog(@"Caches Folder: %@", [NSFileManager fld_cachesFolder]);
+NSString *folder = [[NSFileManager fld_applicationSupportFolder] stringByAppendingPathComponent:@"Temp"];
+NSLog(@"Created Folder: %@ - Success: %@ ", folder, [NSFileManager fld_createFolder:folder] ? @"YES" : @"NO");
+NSLog(@"Empty Folder: %@ - Success: %@ ", folder, [NSFileManager fld_emptyFolder:folder] ? @"YES" : @"NO");
+```
+
 ## Requirements
 
 ## Installation
