@@ -7,7 +7,7 @@
 //
 
 #import "FLDAppDelegate.h"
-#import <Folders/NSString+Folders.h>
+#import <Folders/NSFileManager+Folders.h>
 
 @implementation FLDAppDelegate
 
@@ -15,15 +15,18 @@
 {
     // Override point for customization after application launch.
     
-    NSLog(@"Application Support Folder: %@", [NSString fld_applicationSupportFolder]);
+    NSLog(@"Application Support Folder: %@", [NSFileManager fld_applicationSupportFolder]);
     
-    NSLog(@"Documents Folder: %@", [NSString fld_documentFolder]);
+    NSLog(@"Documents Folder: %@", [NSFileManager fld_documentFolder]);
     
-    NSLog(@"Caches Folder: %@", [NSString fld_cachesFolder]);
+    NSLog(@"Caches Folder: %@", [NSFileManager fld_cachesFolder]);
     
-    NSLog(@"Created Folder: %@", [NSString fld_findOrCreateFolder:@"Temp"
-                                                         inFolder:[NSString fld_applicationSupportFolder]
-                                                            error:nil]);
+    NSString *folder = [[NSFileManager fld_applicationSupportFolder] stringByAppendingPathComponent:@"Temp"];
+    
+    NSLog(@"Created Folder: %@ - Success: %@ ", folder, [NSFileManager fld_createFolder:folder] ? @"YES" : @"NO");
+    
+    NSLog(@"Empty Folder: %@ - Success: %@ ", folder, [NSFileManager fld_emptyFolder:folder] ? @"YES" : @"NO");
+    
     return YES;
 }
 

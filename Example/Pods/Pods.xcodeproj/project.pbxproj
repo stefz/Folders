@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B54AA97A78E3E6A6408BCA1A8B200EF /* NSString+Folders.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A73F2E22193E8B290D1114FD1BA240 /* NSString+Folders.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18471DB180E20A1378E78391F9907FA9 /* NSFileManager+Folders.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDD289FA18F61727134A5F25055C266 /* NSFileManager+Folders.m */; };
 		3CD613834FE9F441FDA3BFD522A30BBA /* Folders.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07F3743CD06A2A14A8897E6D8C1AB889 /* Folders.bundle */; };
 		4706347658E80C1CD99C02D2500492EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		5844AF6878231E50B6EC4492C0114C70 /* Folders-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3412E651F4F12A8C2F9CB3BAF7E86B94 /* Folders-dummy.m */; };
-		6939FFEDE920555343505FBA66A38891 /* NSString+Folders.m in Sources */ = {isa = PBXBuildFile; fileRef = 065F149B34496312DE31294FE4020441 /* NSString+Folders.m */; };
 		7B827D3FFF92DC24FACBF66DE8A606CC /* Pods-Folders_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7D8FE13B230FEBB46DCECDA8A6310 /* Pods-Folders_Example-dummy.m */; };
 		809085321198F3F53686CF07D2BBA96A /* Pods-Folders_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 111CF753AC9A5F4D9935D6D181C2661B /* Pods-Folders_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84F9ABF8C382B0A5324159BF32FD06D3 /* Folders-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3412E651F4F12A8C2F9CB3BAF7E86B94 /* Folders-dummy.m */; };
+		AB68FF4E1410B15A621964FE4CB46497 /* NSFileManager+Folders.h in Headers */ = {isa = PBXBuildFile; fileRef = 125D1909D9C8D9AC5BD8C5A65AF58DD1 /* NSFileManager+Folders.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE7DDB555DC66D8CD36BBA72F418DE88 /* Folders-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E2B86443E8003E30DFBB2EADEB3C31 /* Folders-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5225C76E83D6DEC3BBB1BDB3CDA796C /* Pods-Folders_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7E0F5958F084FF442795E836645845F /* Pods-Folders_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B787EDA160BBD9E2D106A1BD0B8E30E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		C53BC9799F5CCF2C02296CA47444D339 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		EA5EB141EAE84FC602F7EEDCCAD18F4F /* Pods-Folders_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 196A57DD6B71CA61AE56FA46EABA6109 /* Pods-Folders_Tests-dummy.m */; };
-		FADF1E183CA40FA0E8E8F174F11979B0 /* Folders-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E2B86443E8003E30DFBB2EADEB3C31 /* Folders-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,15 +47,14 @@
 
 /* Begin PBXFileReference section */
 		01D265F8A5839FE573DC8D88C92B5724 /* Pods-Folders_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Folders_Example.modulemap"; sourceTree = "<group>"; };
-		065F149B34496312DE31294FE4020441 /* NSString+Folders.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Folders.m"; sourceTree = "<group>"; };
 		06AA1319B76675CAD165974F82585968 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F3743CD06A2A14A8897E6D8C1AB889 /* Folders.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Folders.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CD5D64F8A91B68D80015DF8D13E5F8 /* Pods-Folders_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Folders_Tests-resources.sh"; sourceTree = "<group>"; };
 		111CF753AC9A5F4D9935D6D181C2661B /* Pods-Folders_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Folders_Example-umbrella.h"; sourceTree = "<group>"; };
+		125D1909D9C8D9AC5BD8C5A65AF58DD1 /* NSFileManager+Folders.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Folders.h"; sourceTree = "<group>"; };
 		177F90C764C2C2D1B5A46F533D8B2337 /* Folders-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Folders-prefix.pch"; sourceTree = "<group>"; };
 		18CD91C32C894C4CAEB932F1222D591C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		196A57DD6B71CA61AE56FA46EABA6109 /* Pods-Folders_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Folders_Tests-dummy.m"; sourceTree = "<group>"; };
-		27A73F2E22193E8B290D1114FD1BA240 /* NSString+Folders.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Folders.h"; sourceTree = "<group>"; };
 		2DB36C7B7AEEA5E542BEB039E43D9F7C /* Pods-Folders_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Folders_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		31F0388B0B931A7E48EFB62C2A5B8C38 /* Folders.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Folders.xcconfig; sourceTree = "<group>"; };
 		3412E651F4F12A8C2F9CB3BAF7E86B94 /* Folders-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Folders-dummy.m"; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		8C518072CC9E37D96319739AEB9D6A50 /* Pods-Folders_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Folders_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A0CCBBAB01A0D2905255C2DBAD9AA0C8 /* Folders.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Folders.modulemap; sourceTree = "<group>"; };
 		A72C3C0A89E6B37FEA68FF80FCCFF286 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEDD289FA18F61727134A5F25055C266 /* NSFileManager+Folders.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Folders.m"; sourceTree = "<group>"; };
 		B17C2A818CCC1DEAD346320E783D88FF /* Pods-Folders_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Folders_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B7E406F775B521B8049CCA19A46A46C3 /* Pods_Folders_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Folders_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -140,15 +140,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		26C351E24E9AD482394BCA9257BE51FB /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				27A73F2E22193E8B290D1114FD1BA240 /* NSString+Folders.h */,
-				065F149B34496312DE31294FE4020441 /* NSString+Folders.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +149,15 @@
 				F5E2229A1EFAEC07612778C0817F200E /* Products */,
 				165E4A32627E3E0C9356418824E16224 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7E27EEDDE4E8685C1C673822EBFEC15D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				125D1909D9C8D9AC5BD8C5A65AF58DD1 /* NSFileManager+Folders.h */,
+				AEDD289FA18F61727134A5F25055C266 /* NSFileManager+Folders.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		88630712EC6BAF07CDC23CF4F66738E8 /* Folders */ = {
@@ -207,7 +207,7 @@
 		BE0911EC4E4A5851382A0076EA7139D4 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				26C351E24E9AD482394BCA9257BE51FB /* Classes */,
+				7E27EEDDE4E8685C1C673822EBFEC15D /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -252,12 +252,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		13D3FC8B17E7057967C791F9A3C3766A /* Headers */ = {
+		5EDE84DA01AD74EBFACCAB70010E2FCD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FADF1E183CA40FA0E8E8F174F11979B0 /* Folders-umbrella.h in Headers */,
-				2B54AA97A78E3E6A6408BCA1A8B200EF /* NSString+Folders.h in Headers */,
+				AE7DDB555DC66D8CD36BBA72F418DE88 /* Folders-umbrella.h in Headers */,
+				AB68FF4E1410B15A621964FE4CB46497 /* NSFileManager+Folders.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,10 +337,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE3C50A36B38720CDD8B5FE451452BEE /* Build configuration list for PBXNativeTarget "Folders" */;
 			buildPhases = (
-				A50C9C8519EDD38A2EBBC80795D40461 /* Sources */,
+				F48571CCF8645F901DF2F50DA75BD177 /* Sources */,
 				65FF911CB0D4C4E5A91648219DE74D74 /* Frameworks */,
 				9705E623AEA78D50CAB35885227BB737 /* Resources */,
-				13D3FC8B17E7057967C791F9A3C3766A /* Headers */,
+				5EDE84DA01AD74EBFACCAB70010E2FCD /* Headers */,
 			);
 			buildRules = (
 			);
@@ -407,15 +407,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A50C9C8519EDD38A2EBBC80795D40461 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5844AF6878231E50B6EC4492C0114C70 /* Folders-dummy.m in Sources */,
-				6939FFEDE920555343505FBA66A38891 /* NSString+Folders.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B104EE2B0D2758B764ACD1C533C631D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +420,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B827D3FFF92DC24FACBF66DE8A606CC /* Pods-Folders_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48571CCF8645F901DF2F50DA75BD177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F9ABF8C382B0A5324159BF32FD06D3 /* Folders-dummy.m in Sources */,
+				18471DB180E20A1378E78391F9907FA9 /* NSFileManager+Folders.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

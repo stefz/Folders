@@ -1,12 +1,12 @@
 //
-//  NSString+Folders.m
+//  NSFileManager+Folders.m
 //  Folders
 //
 //  Created by Stefano Zanetti on 29/01/16.
 //  Copyright © 2016 Stefano Zanetti. All rights reserved.
 //
 
-#import "NSString+Folders.h"
+#import "NSFileManager+Folders.h"
 
 NSString * const FLDFolderDomain = @"com.folder";
 
@@ -14,7 +14,7 @@ typedef NS_ENUM(NSInteger, FLDFolderError) {
     FLDFolderErrorPathNotFound
 };
 
-@implementation NSString (Folders)
+@implementation NSFileManager (Folders)
 
 #pragma mark - Private methods
 
@@ -138,21 +138,37 @@ typedef NS_ENUM(NSInteger, FLDFolderError) {
     return caches;
 }
 
-+ (BOOL)fld_excludeFolderFromBackup:(NSString *)folder {
-    return [self fld_addExcludeBackupAttributeToItemAtURL:[[NSURL alloc] initFileURLWithPath:folder]];
-}
-
-+ (NSString *)fld_findOrCreateFolder:(NSString *)folder inFolder:(NSString *)inFolder error:(NSError **)error {
++ (BOOL)fld_createFolder:(NSString *)folder {
     
-    NSString *path = inFolder;
-    path = [path stringByAppendingPathComponent:folder];
-    
-    BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:error];
+    NSError *error = nil;
+    BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:&error];
     if (!success) {
-        return nil;
+        NSLog(@"Unable to find or create %@ directory:\n%@", folder, error);
     }
     
-    return path;
+    return success;
+}
+
++ (BOOL)fld_emptyFolder:(NSString *)folder {
+    
+    NSError *error = nil;
+    BOOL success = [[NSFileManager defaultManager] removeItemAtPath:folder error:&error];
+    
+    if (!success) {
+        NSLog(@"Unable to delete directory:\n%@", error);
+        return success;
+    }
+    
+    success = [[NSFileManager defaultManager] createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:&error];
+    if (!success) {
+        NSLog(@"Unable to create directory:\n%@", error);
+    }
+    
+    return success;
+}
+
++ (BOOL)fld_excludeFolderFromBackup:(NSString *)folder {
+    return [self fld_addExcludeBackupAttributeToItemAtURL:[[NSURL alloc] initFileURLWithPath:folder]];
 }
 
 @end
