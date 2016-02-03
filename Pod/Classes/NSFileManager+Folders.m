@@ -152,16 +152,22 @@ typedef NS_ENUM(NSInteger, FLDFolderError) {
 + (BOOL)fld_emptyFolder:(NSString *)folder {
     
     NSError *error = nil;
-    BOOL success = [[NSFileManager defaultManager] removeItemAtPath:folder error:&error];
-    
-    if (!success) {
-        NSLog(@"Unable to delete directory:\n%@", error);
-        return success;
-    }
+    BOOL success = [self fld_deleteFolder:folder];
     
     success = [[NSFileManager defaultManager] createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:&error];
     if (!success) {
         NSLog(@"Unable to create directory:\n%@", error);
+    }
+    
+    return success;
+}
+
++ (BOOL)fld_deleteFolder:(NSString *)folder {
+    NSError *error = nil;
+    BOOL success = [[NSFileManager defaultManager] removeItemAtPath:folder error:&error];
+    
+    if (!success) {
+        NSLog(@"Unable to delete directory:\n%@", error);
     }
     
     return success;

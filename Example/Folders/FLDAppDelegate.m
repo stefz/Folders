@@ -27,6 +27,8 @@
     
     NSLog(@"Empty Folder: %@ - Success: %@ ", folder, [NSFileManager fld_emptyFolder:folder] ? @"YES" : @"NO");
     
+    NSLog(@"Delete Folder: %@ - Success: %@ ", folder, [NSFileManager fld_deleteFolder:folder] ? @"YES" : @"NO");
+    
     return YES;
 }
 
