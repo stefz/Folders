@@ -8,7 +8,7 @@
 
 #import "NSFileManager+Folders.h"
 
-NSString * const FLDFolderDomain = @"com.folder";
+NSString * const FLDFolderDomain = @"it.folder";
 
 typedef NS_ENUM(NSInteger, FLDFolderError) {
     FLDFolderErrorPathNotFound
@@ -17,6 +17,15 @@ typedef NS_ENUM(NSInteger, FLDFolderError) {
 @implementation NSFileManager (Folders)
 
 #pragma mark - Private methods
+
+dispatch_queue_t backgroundFolderQueue() {
+    static dispatch_once_t queueCreationGuard;
+    static dispatch_queue_t queue;
+    dispatch_once(&queueCreationGuard, ^{
+        queue = dispatch_queue_create("it.folders.backgroundQueue", DISPATCH_QUEUE_SERIAL);
+    });
+    return queue;
+}
 
 + (NSString *)fld_appFolder {
     static dispatch_once_t onceToken;
@@ -152,7 +161,7 @@ typedef NS_ENUM(NSInteger, FLDFolderError) {
 + (BOOL)fld_emptyFolder:(NSString *)folder {
     
     NSError *error = nil;
-    BOOL success = [self fld_deleteFolder:folder];
+    BOOL success = [self fld_deleteItem:folder];
     
     success = [[NSFileManager defaultManager] createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:&error];
     if (!success) {
@@ -162,12 +171,29 @@ typedef NS_ENUM(NSInteger, FLDFolderError) {
     return success;
 }
 
-+ (BOOL)fld_deleteFolder:(NSString *)folder {
++ (BOOL)fld_deleteItem:(NSString *)item {
     NSError *error = nil;
-    BOOL success = [[NSFileManager defaultManager] removeItemAtPath:folder error:&error];
     
+    if (![[NSFileManager defaultManager] fileExistsAtPath:item]) {
+        return YES;
+    }
+    
+    NSString *itemToDelete = [item stringByAppendingString:[NSString stringWithFormat:@"_%zd_to_delete", [NSDate timeIntervalSinceReferenceDate]]];
+    
+    BOOL success = [[NSFileManager defaultManager] moveItemAtPath:item
+                                                           toPath:itemToDelete
+                                                            error:&error];
     if (!success) {
-        NSLog(@"Unable to delete directory:\n%@", error);
+        NSLog(@"Unable to move item:\n%@", error);
+    } else {
+        dispatch_async(backgroundFolderQueue(), ^{
+            NSError *deleteError = nil;
+            BOOL deleteSucces = [[NSFileManager defaultManager] removeItemAtPath:itemToDelete error:&deleteError];
+            
+            if (!deleteSucces) {
+                NSLog(@"Unable to delete item:\n%@", deleteError);
+            }
+        });
     }
     
     return success;

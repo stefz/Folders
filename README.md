@@ -1,11 +1,14 @@
 # Folders
 
-[![CI Status](http://img.shields.io/travis/Stefano Zanetti/Folders.svg?style=flat)](https://travis-ci.org/Stefano Zanetti/Folders)
 [![Version](https://img.shields.io/cocoapods/v/Folders.svg?style=flat)](http://cocoapods.org/pods/Folders)
 [![License](https://img.shields.io/cocoapods/l/Folders.svg?style=flat)](http://cocoapods.org/pods/Folders)
 [![Platform](https://img.shields.io/cocoapods/p/Folders.svg?style=flat)](http://cocoapods.org/pods/Folders)
 
 ## Usage
+
+Folders is a simple NSFileManager category to be fast with folders..
+
+Basically it creates a folder named with the app bundle identifier inside the Document, Application Support and Caches Directories. This because is more simple to manage some situation. For example if you want to delete the entire content of a directory (with a lot of file...) Folder does it in background but the current directory is clean and ready to use immediately.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 

@@ -20,14 +20,14 @@
     NSLog(@"Documents Folder: %@", [NSFileManager fld_documentFolder]);
     
     NSLog(@"Caches Folder: %@", [NSFileManager fld_cachesFolder]);
-    
+        
     NSString *folder = [[NSFileManager fld_applicationSupportFolder] stringByAppendingPathComponent:@"Temp"];
     
     NSLog(@"Created Folder: %@ - Success: %@ ", folder, [NSFileManager fld_createFolder:folder] ? @"YES" : @"NO");
     
     NSLog(@"Empty Folder: %@ - Success: %@ ", folder, [NSFileManager fld_emptyFolder:folder] ? @"YES" : @"NO");
     
-    NSLog(@"Delete Folder: %@ - Success: %@ ", folder, [NSFileManager fld_deleteFolder:folder] ? @"YES" : @"NO");
+    NSLog(@"Delete Folder: %@ - Success: %@ ", folder, [NSFileManager fld_deleteItem:folder] ? @"YES" : @"NO");
     
     return YES;
 }

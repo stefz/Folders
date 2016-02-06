@@ -1,25 +1,21 @@
 {
   "name": "Folders",
   "version": "0.1.0",
-  "summary": "A short description of Folders.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/Folders",
+  "summary": "Just a NSFileManager category to be fast with folders...",
+  "description": "Basically it creates a folder named with the app bundle identifier inside the Document, Application Support and Caches Directories. This because is more simple to manage some situation. For example if you want to delete the entire content of a directory (with a lot of file...) Folder does it in background but the current directory is clean and ready to use immediately.",
+  "homepage": "https://github.com/stefz/Folders",
   "license": "MIT",
   "authors": {
     "Stefano Zanetti": "stefano.zanetti@pragmamark.org"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/Folders.git",
+    "git": "https://github.com/stefz/Folders.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/stezanna",
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "Folders": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "source_files": "Pod/Classes/**/*"
 }

@@ -55,14 +55,14 @@
 + (BOOL)fld_emptyFolder:(NSString *)folder;
 
 /**
- *  Removes a folder
+ *  Removes a folder / files
  *
- *  @param folder the user path to be removed
+ *  @param item the user path to be removed
  *
  *  @return a boolean to know if the operation is gone right or not
  */
 
-+ (BOOL)fld_deleteFolder:(NSString *)folder;
++ (BOOL)fld_deleteItem:(NSString *)item;
 
 /**
  *  Excludes folder from iCloud backup. Only the Caches Directory is automatically excluded by Apple

@@ -1,6 +1,0 @@
-framework module Folders {
-  umbrella header "Folders-umbrella.h"
-
-  export *
-  module * { export * }
-}

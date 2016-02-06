@@ -10,17 +10,9 @@ Pod::Spec.new do |s|
   s.name             = "Folders"
   s.version          = "0.1.0"
   s.summary          = "Just a NSFileManager category to be fast with folders..."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+  s.description      = "Basically it creates a folder named with the app bundle identifier inside the Document, Application Support and Caches Directories. This because is more simple to manage some situation. For example if you want to delete the entire content of a directory (with a lot of file...) Folder does it in background but the current directory is clean and ready to use immediately."
 
   s.homepage         = "https://github.com/stefz/Folders"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Stefano Zanetti" => "stefano.zanetti@pragmamark.org" }
   s.source           = { :git => "https://github.com/stefz/Folders.git", :tag => s.version.to_s }
@@ -30,11 +22,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'Folders' => ['Pod/Assets/*.png']
-  }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
